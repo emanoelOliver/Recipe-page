@@ -1,0 +1,229 @@
+ /* * BODY */
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ body {
+  font-family: Young-serif;
+  color: hsl(24, 5%, 18%);
+  background-color: hsl(30, 54%, 90%);
+  overflow-x: hidden;
+ }
+
+main {
+  width: 90%;
+  margin: 7rem auto;
+  padding: 3rem;
+  background-color: #FFF;
+  border-radius: 30px;
+}
+
+/* DESCRIÇÃO ABAIXO DA IMAGEM */
+
+#div-description h1 {
+  font-size: 2.7rem;
+  color: hsl(24, 5%, 18%);
+  padding: 2rem 0 1rem 0;
+}
+
+/* * SECTION PRAPARATION */
+
+#div-description p {
+  font-family: Outfit;
+  font-size: 1rem;
+  color: hsl(30, 10%, 34%);
+  padding-bottom: 1.8rem;
+}
+
+#div-preparation {
+  padding: 2rem;
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 10px;
+}
+
+#div-preparation h2 {
+  font-family: Outfit;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  color: hsl(332, 51%, 32%);
+  
+}
+
+#div-preparation ul {
+  padding: 0 0 0 0.6rem;
+  list-style: none;
+}
+
+#div-preparation ul li {
+  position: relative;
+  padding: 0 0 15px 1.9rem;
+  font-family: Outfit;
+  color: hsl(30, 10%, 34%);
+}
+
+#div-preparation ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: hsl(332, 51%, 32%);
+  border-radius: 50%;
+}
+
+/* * SECTION INGREDIENTS */
+
+#div-ingredients ul {
+  list-style: none;
+  padding: 0 0 1rem 0.5rem;
+}
+
+#div-ingredients ul li {
+  position: relative;
+  padding: 0 0 15px 1.9rem;
+  font-family: Outfit;
+}
+
+#div-ingredients ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: hsl(14, 45%, 36%);
+}
+
+/* * SECTION INSTRUCTION */
+
+#div-instructions ol {
+  padding: 0 0 0 0.6rem;
+  counter-reset: list-counter;
+}
+
+#div-instructions ol li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 15px 1.9rem;
+  font-family: Outfit;
+}
+
+#div-instructions ol li::before {
+  content: counter(list-counter) '.';
+  counter-increment: list-counter;
+  position: absolute;
+  left: 0;
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
+
+/* * SECTION NUTRITION */
+
+#paragraph-nutrition {
+  font-family: Outfit;
+  color: hsl(30, 10%, 34%);
+  padding-bottom: 1.8rem;
+}
+
+.teste {
+  font-family: Outfit;
+  padding: 0.5rem 0 1rem 0;
+  margin: 0 0 0 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#table-nutrition span {
+  color: hsl(14, 45%, 36%);
+  padding-right: 20rem;
+}
+
+
+/* * RESPONSIVE */
+
+h1, .sub-title {
+  font-size: 2rem;
+}
+
+#div-description p, #div-preparation ul li, #div-ingredients ul li, #paragraph-nutrition {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 95%;  
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+
+  h1, .sub-title {
+    font-size: 1.5rem; 
+  }
+
+  #div-description p, #div-preparation ul li, #div-ingredients ul li, #paragraph-nutrition {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    width: 100%;  
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  h1, .sub-title {
+    font-size: 1.2rem;
+  }
+
+  #div-description p, #div-preparation ul li, #div-ingredients ul li, #paragraph-nutrition {
+    font-size: 0.8rem;
+  }
+}
+
+/* * CLASS / OTHER  */
+
+.sub-title {
+  font-size: 2rem;
+  padding: 2rem 0 1rem 0;
+  color: hsl(14, 45%, 36%);
+}
+
+.line {
+  border-bottom: 2px solid hsl(30, 18%, 87%);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+span {
+  color: hsl(30, 10%, 34%);
+  font-weight: bold;
+}
+
+footer {
+  font-size: 1rem;
+  font-family: Outfit;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(30, 10%, 34%);
+}
+
+a:hover {
+  transition: 1s;
+  color: hsl(14, 45%, 36%);
+}
